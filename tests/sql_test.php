@@ -3,7 +3,7 @@
 
     $id = 1;
     $nome = 'flavio';
-    $email = 'flaviog@gmail.com';
+    $email = 'flaviog@gmaili.com';
     $senha = '123456';
     $dados = ['nome' => $nome
             , 'email' => $email

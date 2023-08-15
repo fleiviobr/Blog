@@ -90,6 +90,7 @@
     function deleta(string $entidade, array $criterio = []) : bool
     {
         $retorno = false;
+        $coringa_criterio = [];
 
         foreach ($criterio as $expressao) {
             $dado = $expressao [count($expressao) -1];
@@ -99,18 +100,13 @@
             $coringa_criterio[] = $expressao;
 
             $nome_campo = (count($expressao) < 4) ? $expressao[0] : $expressao[1];
-
-            if(isset($nome_campo)) {
-                $$nome_campo = $nome_campo . ' ' . rand();
-            }
-
+          
             $campos_criterio[] = $nome_campo;
 
             $$nome_campo = $dado;
         }
 
         $instrucao = delete($entidade, $coringa_criterio);
-
         $conexao = conecta();
 
         $stmt = mysqli_prepare($conexao, $instrucao);
@@ -119,7 +115,6 @@
             $comando = 'mysqli_stmt_bind_param($stmt,';
             $comando .= '\'' . implode('', $tipo) . '\',';
             $comando .= '$' . implode(', $', $campos_criterio) . ');';
-        
             eval($comando);
         }
 
