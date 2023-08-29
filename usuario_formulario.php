@@ -3,13 +3,13 @@
     <head>
         <title>Usuario | Projeto para Web com PHP</title>
         <link rel="stylesheet"
-            href="lib/bootstap-4.2.1-dist/css/bootstrap.min.css">
+            href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
     </head>
     <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-                    <?php include_once 'menu.php'; ?>
+                    <?php include 'includes/topo.php'; ?>
                 </div>
             </div>
             <div class="row" style="min-height: 500px;">
@@ -60,7 +60,7 @@
                         <?php if(!isset($_SESSION['login'])) : ?>
                         <div class="form-group">
                             <label for="senha">Senha</label>
-                            <input class="from-control" type="password"
+                            <input class="form-control" type="password"
                                 require="required" id="senha" name="senha">
                         </div>
                         <?php endif; ?>
