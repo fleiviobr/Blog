@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once '../incluedes/valida_login.php';
+require_once '../includes/valida_login.php';
 require_once '../includes/funcoes.php';
 require_once 'conexao_mysql.php';
 require_once 'sql.php';
@@ -21,8 +21,8 @@ switch($acao) {
         $dados = [
             'titulo' => $titulo,
             'texto' => $texto,
-            'data_postagem' => "$dato_postagem $data_postagem",
-            'usuario_id' => $_SESSION['login'] ['usuario'] ['id0']
+            'data_postagem' => "$data_postagem $data_postagem",
+            'usuario_id' => $_SESSION['login'] ['usuario'] ['id']
         ];
 
         insere(

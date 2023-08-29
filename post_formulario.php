@@ -22,7 +22,7 @@
                 </div>
                 <div class="col-md-12" style="padding-top: 50px;">
                     <?php
-                        require_once 'include/funcoes.php';
+                        require_once 'includes/funcoes.php';
                         require_once 'core/conexao_mysql.php';
                         require_once 'core/sql.php';
                         require_once 'core/mysql.php';
@@ -48,7 +48,7 @@
                         }
                     ?>
                     <h2>Post</h2>
-                    <form action="post" action="core/post_repositorio.php">
+                    <form method="post" action="core/post_repositorio.php">
                         <input type="hidden" name="acao"
                             value="<?php echo empty($id) ? 'insert' : 'update' ?>">
                         <input type="hidden" name="id"
@@ -102,7 +102,7 @@
             <div class="row">
                 <div class="col-md-12">
                     <?php 
-                    include 'includes/rodape.php'; 
+                        include 'includes/rodape.php'; 
                     ?>
                 </div>
         </div>
