@@ -1,7 +1,6 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Projeto para Web com PHP</title>
     <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
@@ -13,8 +12,8 @@
                 <?php include 'includes/topo.php'; ?>
             </div>
         </div>
-        <div class="row">
-            <div class="col-md-12" style="min-height: 500px;">
+        <div class="row" style="min-height: 500px;">
+            <div class="col-md-12" >
                 <?php include 'includes/menu.php'; ?>
             </div>
             <div class="col-md-10" style="padding-top: 50px;">
@@ -24,14 +23,17 @@
                         <input type="hidden" name="acao" value="login">
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="text" class="form-control" require="required" id="email" name="email">
+                            <input type="text" class="form-control" 
+                                require="required" id="email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="senha">Senha</label>
-                            <input type="password" class="form-control" require="required" id="senha" name="senha">
+                            <input type="password" class="form-control" 
+                                require="required" id="senha" name="senha">
                         </div>
                         <div class="text-right">
-                            <button class="btn btn-success" type="submit">Acessar</button>
+                            <button class="btn btn-success" 
+                                type="submit">Acessar</button>
                         </div>
                     </form>
                 </div>
