@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Projeto para Web com PHP</title>
     <link rel="stylesheet" href="lib/bootstrap-4.2.1-dist/css/bootstrap.min.css">
@@ -23,17 +24,14 @@
                         <input type="hidden" name="acao" value="login">
                         <div class="form-group">
                             <label for="email">E-mail</label>
-                            <input type="text" class="form-control" 
-                                require="required" id="email" name="email">
+                            <input type="text" class="form-control" required id="email" name="email">
                         </div>
                         <div class="form-group">
                             <label for="senha">Senha</label>
-                            <input type="password" class="form-control" 
-                                require="required" id="senha" name="senha">
+                            <input type="password" class="form-control" required id="senha" name="senha">
                         </div>
                         <div class="text-right">
-                            <button class="btn btn-success" 
-                                type="submit">Acessar</button>
+                            <button class="btn btn-success" type="submit">Acessar</button>
                         </div>
                     </form>
                 </div>
